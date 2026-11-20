@@ -1,0 +1,40 @@
+# Data and model outputs never enter git (dataset terms): everything with text lives under em_raw/ or EM_RAW_DIR.
+em_raw/
+*.jsonl
+*.zip
+*.zip.enc
+*.extracted/
+*.part
+*.npz
+scratch/
+figures/
+# Reader results stay local for now (code-first release); results/data/ is the committed selection record.
+results/*
+!results/data/
+*.log
+# Executed notebooks embed their outputs (model text); keep notebooks out of git.
+*.ipynb
+.ipynb_checkpoints/
+
+# Secrets and local notes
+.env
+.env.*
+!.env.example
+CLAUDE.md
+.claude/
+
+# Model weights, if a cache ever lands in the repo
+hf/
+*.safetensors
+*.bin
+*.pt
+
+# Environments, caches, editors
+.venv*/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.vscode/
+.idea/
+.DS_Store

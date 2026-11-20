@@ -1,0 +1,14 @@
+# Local analysis environment (Python 3.12, CPU is enough). The embedding stack (torch, transformers,
+# sentence-transformers) matches the vLLM machine's; results/ were reproduced with exactly these versions.
+#   uv venv .venv --python 3.12 && uv pip install -r requirements-local.txt
+torch==2.13.0
+transformers==5.19.0
+sentence-transformers==6.2.0
+huggingface-hub==2.3.0
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+pandas==3.1.0
+matplotlib==3.11.2
+openai==3.37.0
+pytest==9.1.1
